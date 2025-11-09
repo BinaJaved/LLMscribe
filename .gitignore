@@ -1,0 +1,27 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Node
+frontend/node_modules/
+frontend/build/
+backend/node_modules/
+
+# Python
+# Node
+frontend/node_modules/
+frontend/build/
+backend/node_modules/
+
+# Python backend / PolyCoder service
+backend/polycoder_service/.venv/
+backend/polycoder_service/venv/
+backend/polycoder_service/__pycache__/
+backend/polycoder_service/*.pyc
+backend/polycoder_service/.env
+
+# OS / Misc
+.DS_Store
+
+# Logs
+*.log

@@ -15,6 +15,7 @@ backend/node_modules/
 
 # Python backend / PolyCoder service
 backend/polycoder_service/.venv/
+backend/.env
 backend/polycoder_service/venv/
 backend/polycoder_service/__pycache__/
 backend/polycoder_service/*.pyc

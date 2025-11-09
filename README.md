@@ -20,21 +20,24 @@ LLM Scribe is a developer productivity tool that converts code snippets into rea
 
 ## Project Structure
 
+```text
 LLM-Scribe/
 ├── backend/
-│ ├── poly_service.py # FastAPI service for PolyCoder
-│ ├── server.ts # Node.js/Express backend connecting React frontend & PolyCoder
-│ └── .venv/ # Python virtual environment
+│   ├── poly_service.py      # FastAPI service for PolyCoder
+│   ├── server.ts            # Node.js/Express backend connecting React frontend & PolyCoder
+│   ├── package.json         # Node.js backend dependencies
+│   ├── .venv/               # Python virtual environment
+│   └── .env                 # Environment variables (API keys)
 ├── frontend/
-│ ├── src/
-│ │ ├── App.tsx # React frontend main component
-│ │ └── App.css # Optional CSS styling
+│   ├── src/
+│   │   ├── App.tsx          # React frontend main component
+│   │   └── App.css          # Optional CSS styling
+│   ├── package.json         # Frontend dependencies
+│   └── public/
+│       └── index.html
 ├── .gitignore
 └── README.md
-
-yaml
-Copy code
-
+```
 ---
 
 ## Tech Stack
@@ -54,39 +57,38 @@ Copy code
 
 1. Create a Python virtual environment:
 
-```bash
+```  
 cd backend
 python3 -m venv .venv
 source .venv/bin/activate
+```
+
 Install Python dependencies:
-
-bash
-Copy code
+```
 pip install fastapi[all] torch transformers uvicorn
-Start the PolyCoder service:
+```
 
-bash
-Copy code
-uvicorn poly_service:app --host 0.0.0.0 --port 8001 --reload
+Start the PolyCoder service: 
+```uvicorn poly_service:app --host 0.0.0.0 --port 8001 --reload```
+
 Install Node.js dependencies and start the backend:
-
-bash
-Copy code
+```
 cd backend
 npm install
 npm run dev
-Frontend
-Install dependencies:
+```
+## Frontend
 
-bash
-Copy code
+Install dependencies:
+ ```
 cd frontend
 npm install
+```
 Start the frontend:
-
-bash
-Copy code
+```
 npm start
+```
+
 Usage
 Open the React frontend in your browser (http://localhost:3000).
 
